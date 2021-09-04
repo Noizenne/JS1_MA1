@@ -1,3 +1,17 @@
+const cats = [
+    {
+        name: "Blob",
+        age: 10
+    },
+    {
+        name: "Harold",
+    },
+    {
+        name: "Blurt",
+        age: 21
+    }
+];
+
 // Question 1
 const cat = {
     complain: function () {
@@ -38,4 +52,17 @@ for (let i = 0; i < paragraphs.length; i++) {
 
 
 // Question 7
+
+function catList(list) {
+    for(let i = 0; list.length; i++) {
+        console.log(list[i]);
+    }
+}
+
+catList(cats);
+
 // Question 8
+
+function createCats (cats) {
+    
+}
