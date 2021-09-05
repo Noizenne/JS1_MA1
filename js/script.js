@@ -49,13 +49,18 @@ for (let i = 0; i < paragraphs.length; i++) {
 
 // Question 6
 
+const resultsContainer = document.querySelector(".results");
+
+resultsContainer.innerHTML = "<p>New Paragraph</p>";
+resultsContainer.style.background = "yellow";
+
 
 
 // Question 7
 
 function catList(list) {
-    for(let i = 0; list.length; i++) {
-        console.log(list[i]);
+    for(let i = 0; i < list.length; i++) {
+        console.log(list[i].name);
     }
 }
 
@@ -64,5 +69,29 @@ catList(cats);
 // Question 8
 
 function createCats (cats) {
+
+    let html = "";
+
+    for (let i = 0; i < cats.length; i++) {
+
+        let age = " Age unknown";
+
+        if (cats[i].age !== undefined) {
+            age = cats[i].age;
+        }
+
+        html += `<div>
+        <h5>${cats[i].name}</h5>
+        <p>${age}</p>
+        </div>`;
+    }
     
+    return html;
+
 }
+
+const createHTML = createCats(cats);
+
+const catContainer = document.querySelector(".cat-container");
+
+catContainer.innerHTML = createHTML;
